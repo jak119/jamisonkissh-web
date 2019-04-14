@@ -33,7 +33,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # images = [""]
   themeColor = "#494f5c"
 
-  homeSubtitle = "Azure Architect"
+  homeSubtitle = "Azure Architect and Consultant"
   # footerCopyright = ''
   # bgImg = ""  # Homepage background-image URL
 
@@ -55,18 +55,18 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
   [[params.social]]
     name = "email"
-    url = "mailto:hello@jamisonkissh.com"
+    url = "contact/"
 
   [[params.social]]
     name = "github"
     url = "https://github.com/jak119"
 
 
-#[menu]
+# [menu]
 #
 #  [[menu.main]]
-#    name = "Posts"
-#    url = "posts/"
+#    name = "PGP Key"
+#    url = "pgp-key/"
 #    weight = 10
 
 #  [[menu.main]]
