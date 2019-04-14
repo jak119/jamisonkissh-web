@@ -62,12 +62,12 @@ googleAnalytics = "UA-21890393-1"
     url = "https://github.com/jak119"
 
 
-# [menu]
-#
-#  [[menu.main]]
-#    name = "PGP Key"
-#    url = "pgp-key/"
-#    weight = 10
+ [menu]
+
+  [[menu.main]]
+    name = "Posts"
+    url = "posts/"
+    weight = 10
 
 #  [[menu.main]]
 #    name = "About"
