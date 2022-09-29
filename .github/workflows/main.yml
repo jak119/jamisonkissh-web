@@ -5,10 +5,11 @@ on:
     branches:
       - master
   pull_request:
-    branches: [main]
+    branches:
+      - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,6 +21,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.91.2'
+          extended: true
 
       - name: Build
         run: hugo --minify
