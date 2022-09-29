@@ -1,8 +1,0 @@
-# Created by https://www.htaccessbuilder.com/
-# Edit at https://www.htaccessbuilder.com/rules/5cb288761931d/
-# Sun, 14th April 2019
-<IfModule mod_rewrite.c>
-# Force clients to use https
-RewriteCond %{HTTPS} !=on
-RewriteRule (.*) https://jamisonkissh.com/$1 [R=301,L]
-</IfModule> 
