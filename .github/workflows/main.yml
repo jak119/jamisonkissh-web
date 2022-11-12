@@ -50,12 +50,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Generated Site
-      - name: Display structure of downloaded files
-        run: cd ${{steps.download.outputs.download-path}} && ls -R
-      # - name: Publish
-      #   uses: cloudflare/wrangler-action@2.0.0
-      #   with:
-      #     apiToken: ${{ secrets.CF_API_TOKEN }}
-      #     accountId: ${{ secrets.CF_ACCOUNT_ID }}
-      #     command: pages publish --project-name=jamisonkissh-web
-      #     workingDirectory: ${{steps.download.outputs.download-path}}
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages publish . --project-name=jamisonkissh-web
+          workingDirectory: ${{steps.download.outputs.download-path}}
