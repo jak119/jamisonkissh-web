@@ -46,6 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download the artifact
+        id: download
         uses: actions/download-artifact@v3
         with:
           name: Generated Site
@@ -54,4 +55,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages publish ./jamisonkissh-web --project-name=jamisonkissh-web
+          command: pages publish ${{steps.download.outputs.download-path}} --project-name=jamisonkissh-web
