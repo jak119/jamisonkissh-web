@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -39,3 +40,18 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           enable_jekyll: false
+  deploy_cf:
+    needs: build
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: Generated Site
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages publish --project-name=jamisonkissh-web
