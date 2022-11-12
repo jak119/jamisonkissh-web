@@ -55,4 +55,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages publish ${{steps.download.outputs.download-path}} --project-name=jamisonkissh-web
+          command: pages publish --project-name=jamisonkissh-web
+          workingDirectory: ${{steps.download.outputs.download-path}}
+          
