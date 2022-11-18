@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy to Cloudflare
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_cloudflare:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -29,31 +29,10 @@ jobs:
       - run: npm ci
       - name: Build
         run: hugo --minify
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Generated Site
-          path: ./public/
-      - name: Deploy to GH Pages
-        if: ${{ github.event_name == 'push' }}
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          enable_jekyll: false
-  deploy_cf:
-    needs: build
-    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch'}}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download the artifact
-        id: download
-        uses: actions/download-artifact@v3
-        with:
-          name: Generated Site
       - name: Publish
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command: pages publish . --project-name=jamisonkissh-web
-          workingDirectory: ${{steps.download.outputs.download-path}}
+          workingDirectory: ./public/
