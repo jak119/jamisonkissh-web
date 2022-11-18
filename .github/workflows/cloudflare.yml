@@ -27,7 +27,7 @@ jobs:
       - run: npm ci
       - name: Build
         run: hugo --minify
-      - name: Publish
+      - name: Publish to Cloudflare
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
