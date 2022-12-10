@@ -33,3 +33,7 @@ googleAnalytics = "UA-21890393-1"
         url = "https://resume.jamisonkissh.com"
         icon = "user"
         icon_pack = "fas"
+      [[params.social]]
+        url = "https://blog.jamisonkissh.com"
+        icon = "blog"
+        icon_pack = "fas"
