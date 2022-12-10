@@ -30,6 +30,6 @@ googleAnalytics = "UA-21890393-1"
         icon = "paper-plane"
         icon_pack = "fas"
       [[params.social]]
-        url = "https://resume.kissh.dev"
+        url = "https://resume.jamisonkissh.com"
         icon = "user"
         icon_pack = "fas"
