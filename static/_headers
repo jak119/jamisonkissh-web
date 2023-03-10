@@ -1,2 +1,5 @@
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
+  
+/cdn-cgi/*
+  X-Robots-Tag: noindex
