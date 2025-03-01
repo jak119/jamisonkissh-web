@@ -1,72 +1,74 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jamison Kissh</title>
-    <!-- Bulma CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
-    />
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
 
-      .hero {
-        height: 100%;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jamison Kissh</title>
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
 
-      .profile-pic {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 1.5rem;
-        border: 5px solid #f5f5f5;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+    .hero {
+      height: 100%;
+    }
 
-      .name {
-        font-size: 2.5rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-      }
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 5px solid #f5f5f5;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-      .title {
-        margin-bottom: 2rem;
-        font-size: 1.5rem;
-        color: #4a4a4a;
-      }
+    .name {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
 
-      .social-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-      }
+    .title {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      color: #4a4a4a;
+    }
 
-      .social-buttons .button {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    .bio {
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      .social-buttons .button i {
-        font-size: 1.5rem;
-      }
-    </style>
-    <!-- Structured Data for Google Search -->
-    <script type="application/ld+json">
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-buttons .button {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-buttons .button i {
+      font-size: 1.5rem;
+    }
+  </style>
+  <!-- Structured Data for Google Search -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -83,67 +85,85 @@
           "https://github.com/jak119",
           "https://resume.jamisonkissh.com",
           "https://blog.jamisonkissh.com"
-        ]
+        ],
+        "knowsAbout": ["Azure", "Cloud Architecture", "DevOps", "Automation"]
       }
     </script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  </head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Jamison Kissh is an experienced Azure Architect and Consultant in Boston, leading Azure projects at PwC's CEDA practice with expertise in cloud infrastructure, DevOps, and automation">
+  <meta name="keywords" content="azure architect, azure consultant, cloud architect, Jamison Kissh">
+  <meta name="author" content="Jamison Kissh">
 
-  <body>
-    <section class="hero is-fullheight">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <div class="column is-6 is-offset-3">
-            <!-- Profile Image -->
-            <img
-              src="https://gravatar.com/avatar/130dc17bc30dc717904aa6a36f95251cbd0fd7dc0c1bda1bc1bd3008356a3dd1?s=200"
-              alt="Jamison Kissh headshot"
-              class="profile-pic"
-            />
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Jamison Kissh | Azure Architect and Consultant">
+  <meta property="og:description"
+    content="Experienced Azure Architect and Consultant in Boston, leading Azure projects at PwC's CEDA practice with expertise in cloud infrastructure, DevOps, and automation">
+  <meta property="og:image"
+    content="https://gravatar.com/avatar/130dc17bc30dc717904aa6a36f95251cbd0fd7dc0c1bda1bc1bd3008356a3dd1?">
+  <meta property="og:url" content="https://jamisonkissh.com">
+  <meta property="og:type" content="website">
 
-            <!-- Name -->
-            <h1 class="name">Jamison Kissh</h1>
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jamison Kissh | Azure Architect and Consultant">
+  <meta name="twitter:description"
+    content="Experienced Azure Architect and Consultant in Boston, leading Azure projects at PwC's CEDA practice with expertise in cloud infrastructure, DevOps, and automation">
+  <meta name="twitter:image"
+    content="https://gravatar.com/avatar/130dc17bc30dc717904aa6a36f95251cbd0fd7dc0c1bda1bc1bd3008356a3dd1?">
 
-            <!-- Title/Role -->
-            <p class="title">Azure Architect and Consultant</p>
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
 
-            <!-- Social Media Buttons -->
-            <div class="social-buttons">
-              <a
-                href="https://linkedin.com/in/jamisonkissh"
-                class="button is-dark"
-                aria-label="LinkedIn Profile"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://github.com/jak119"
-                class="button is-dark"
-                aria-label="GitHub Profile"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="https://resume.jamisonkissh.com"
-                class="button is-dark"
-                aria-label="Resume"
-              >
-                <i class="fa-solid fa-briefcase"></i>
-              </a>
-              <a
-                href="https://blog.jamisonkissh.com"
-                class="button is-dark"
-                aria-label="Instagram Profile"
-              >
-                <i class="fa-solid fa-blog"></i>
-              </a>
-            </div>
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.jamisonkissh.com">
+</head>
+
+<body>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-6 is-offset-3">
+          <!-- Profile Image -->
+          <img src="https://gravatar.com/avatar/130dc17bc30dc717904aa6a36f95251cbd0fd7dc0c1bda1bc1bd3008356a3dd1?s=200"
+            alt="Jamison Kissh headshot" class="profile-pic" />
+
+          <!-- Name -->
+          <h1 class="name">Jamison Kissh</h1>
+
+          <!-- Title/Role -->
+          <p class="title">Azure Architect and Consultant</p>
+
+          <!-- Short bio with keywords -->
+          <p class="bio">Experienced Azure Architect and Consultant based in Boston. Currently serving as a Senior
+            Manager in PwC's Cloud, Engineering, Data, and Analytics (CEDA) practice. He leads the technical delivery of
+            Azure projects for clients, leveraging his expertise in cloud infrastructure, DevOps, and general
+            automation.</p>
+
+          <!-- Social Media Buttons -->
+          <div class="social-buttons">
+            <a href="https://linkedin.com/in/jamisonkissh" class="button is-dark" aria-label="LinkedIn Profile"
+              rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/jak119" class="button is-dark" aria-label="GitHub Profile" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://resume.jamisonkissh.com" class="button is-dark" aria-label="Resume">
+              <i class="fa-solid fa-briefcase"></i>
+            </a>
+            <a href="https://blog.jamisonkissh.com" class="button is-dark" aria-label="Instagram Profile">
+              <i class="fa-solid fa-blog"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
+
 </html>
