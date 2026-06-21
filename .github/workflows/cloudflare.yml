@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          fetch-depth: 0
+          persist-credentials: false
       - name: Generate a sitemap
         id: sitemap
         uses: cicirello/generate-sitemap@v1
