@@ -16,9 +16,9 @@ jobs:
       contents: read
       deployments: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 0
       - name: Generate a sitemap
         id: sitemap
         uses: cicirello/generate-sitemap@v1
@@ -26,7 +26,7 @@ jobs:
           base-url-path: https://jamisonkissh.com/
           path-to-root: public
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         if: github.actor != 'dependabot[bot]'
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
