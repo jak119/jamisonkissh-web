@@ -14,10 +14,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       html,
       body {
         min-height: 100vh;
+        background-color: #f9f9fb;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
       }
 
       .container {
@@ -36,30 +49,33 @@
       }
 
       .name {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
       }
 
       .title {
-        margin-bottom: 2rem;
-        font-size: 1.5rem;
-        color: #4a4a4a;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #6b7280;
+        font-weight: 400;
+      }
+
+      .divider {
+        width: 40px;
+        height: 2px;
+        background-color: #3d8b5e;
+        margin: 0 auto 1.5rem;
       }
 
       .bio {
         margin-bottom: 2rem;
-        max-width: 600px;
+        max-width: 520px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        /* Add this line */
-      }
-
-      /* Add this new rule for widow prevention */
-      .bio p {
-        display: inline-block;
-        text-align: center;
+        color: #374151;
+        line-height: 1.7;
       }
 
       .social-buttons {
@@ -75,10 +91,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #2d3748;
+        border-color: #2d3748;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .social-buttons .button:hover {
+        background-color: #3d8b5e;
+        border-color: #3d8b5e;
       }
 
       .social-buttons .button i {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     </style>
     <!-- Structured Data for Google Search -->
@@ -87,7 +113,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Jamison Kissh",
-        "jobTitle": "Azure Architect and Consultant",
+        "jobTitle": "Senior Engineering Manager",
         "worksFor": {
           "@type": "Organization",
           "name": "PwC",
@@ -101,7 +127,14 @@
           "https://resume.jamisonkissh.com",
           "https://blog.jamisonkissh.com"
         ],
-        "knowsAbout": ["Azure", "Cloud Architecture", "DevOps", "Automation"]
+        "knowsAbout": [
+          "Azure",
+          "Platform Engineering",
+          "Infrastructure as Code",
+          "Terraform",
+          "Bicep",
+          "DevOps"
+        ]
       }
     </script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -111,22 +144,19 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Jamison Kissh is an experienced Azure Architect and Consultant in Boston, leading Azure projects at PwC's CEDA practice with expertise in cloud infrastructure, DevOps, and automation"
+      content="Jamison Kissh is a Senior Engineering Manager at PwC in Boston, building cloud platforms on Azure with Terraform and Bicep."
     />
     <meta
       name="keywords"
-      content="azure architect, azure consultant, cloud architect, Jamison Kissh"
+      content="azure architect, platform engineering, cloud infrastructure, Jamison Kissh, terraform, bicep"
     />
     <meta name="author" content="Jamison Kissh" />
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta
-      property="og:title"
-      content="Jamison Kissh | Azure Architect and Consultant"
-    />
+    <meta property="og:title" content="Jamison Kissh" />
     <meta
       property="og:description"
-      content="Experienced Azure Architect and Consultant in Boston, leading Azure projects at PwC's CEDA practice with expertise in cloud infrastructure, DevOps, and automation"
+      content="Senior Engineering Manager at PwC in Boston. I help clients build cloud platforms on Azure — infrastructure with Terraform and Bicep, and the DevOps automation that keeps their developers moving fast."
     />
     <meta
       property="og:image"
@@ -137,13 +167,10 @@
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Jamison Kissh | Azure Architect and Consultant"
-    />
+    <meta name="twitter:title" content="Jamison Kissh" />
     <meta
       name="twitter:description"
-      content="Experienced Azure Architect and Consultant in Boston, leading Azure projects at PwC's CEDA practice with expertise in cloud infrastructure, DevOps, and automation"
+      content="Senior Engineering Manager at PwC in Boston. I help clients build cloud platforms on Azure — infrastructure with Terraform and Bicep, and the DevOps automation that keeps their developers moving fast."
     />
     <meta
       name="twitter:image"
@@ -171,19 +198,21 @@
         <h1 class="name">Jamison Kissh</h1>
 
         <!-- Title/Role -->
-        <p class="title">Azure Architect & Consultant</p>
+        <p class="title">Engineering Manager · Platform Engineering</p>
+
+        <!-- Accent divider -->
+        <div class="divider"></div>
 
         <!-- Short bio -->
         <div class="bio">
           <p>
-            Experienced Azure Architect and Consultant based in Boston.
-            Currently serving as a Senior Engineering Manager in PwC's Cloud,
-            Engineering, Data, and Analytics (CEDA) practice. He leads the
-            technical delivery of Azure projects for clients, leveraging his
-            expertise in cloud infrastructure, DevOps, &
-            general&nbsp;automation.
+            Senior Engineering Manager at PwC in Boston. I help clients build
+            cloud platforms on Azure&nbsp;— infrastructure with Terraform and
+            Bicep, and the DevOps automation (CI/CD, GitHub Actions) that keeps
+            their developers moving fast.
           </p>
         </div>
+
         <!-- Social Media Buttons -->
         <div class="social-buttons">
           <a
@@ -202,13 +231,11 @@
           >
             <i class="fab fa-github"></i>
           </a>
-          <!-- <a href="https://resume.jamisonkissh.com" class="button is-dark" aria-label="Resume">
-          <i class="fa-solid fa-briefcase"></i>
-        </a> -->
           <a
             href="https://blog.jamisonkissh.com"
             class="button is-dark"
-            aria-label="Instagram Profile"
+            aria-label="Blog"
+            rel="noopener"
           >
             <i class="fa-solid fa-blog"></i>
           </a>
